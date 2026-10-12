@@ -90,6 +90,8 @@ npm run dev
 
 Vite: http://localhost:5173 · API: http://localhost:5000/api/health
 
+The root npm workspace includes `client`, so installing from the repository root installs Vite and its build dependencies. Vercel can use the repository root as its project root and run `npm run build`.
+
 In development, if MongoDB is not running at `mongodb://127.0.0.1:27017/aurelia`, the API starts an in-memory database. Set `SEED_DEMO_DATA=true` to load the optional sample data. Production requires a reachable `MONGO_URI`; the API exits on connection failure instead of starting with volatile storage.
 
 ## Environment
