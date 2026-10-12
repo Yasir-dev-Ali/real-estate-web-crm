@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-paper-100 text-ink-900 font-sans antialiased;
+}
+
+::selection {
+  background: #e6d5b8;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #c9bba8;
+  border-radius: 99px;
+}
+
+input,
+select,
+textarea {
+  @apply outline-none;
+}
+
+.field {
+  @apply w-full rounded-xl border border-paper-200 bg-white px-3.5 py-2.5 text-sm text-ink-900 placeholder:text-ink-300 focus:border-ink-700 focus:ring-2 focus:ring-brass-200;
+}
+
+.label {
+  @apply mb-1.5 block text-xs font-semibold uppercase tracking-[0.14em] text-ink-500;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-primary {
+  @apply btn bg-ink-900 text-paper-50 hover:bg-ink-800;
+}
+
+.btn-clay {
+  @apply btn bg-clay-500 text-white hover:bg-clay-600;
+}
+
+.btn-ghost {
+  @apply btn border border-paper-200 bg-white text-ink-800 hover:border-ink-300;
+}
+
+:focus-visible {
+  outline: 2px solid #C4A574;
+  outline-offset: 2px;
+}
